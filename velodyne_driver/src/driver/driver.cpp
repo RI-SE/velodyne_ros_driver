@@ -157,7 +157,7 @@ VelodyneDriver::VelodyneDriver(const rclcpp::NodeOptions & options)
     "velodyne_packets", diagnostics_, diagnostic_updater::FrequencyStatusParam(
       &diag_min_freq_, &diag_max_freq_, 0.1, 10),
     diagnostic_updater::TimeStampStatusParam());
-
+  
   // open Velodyne input device or file
   if (!dump_file.empty()) {                // have PCAP file?
     // read data from packet capture file
